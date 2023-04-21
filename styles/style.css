@@ -34,12 +34,13 @@
   .wrapper{
     width: min(900px, 100% - 3rem);
     margin-inline: auto;
+    padding-block: 30px;
   }
 
   table{
     width: 100%;
     border-collapse: collapse;
-    background-color: #d4a373;
+    background-color: hsl(67 50% 86% / .7);
     border-bottom-left-radius: 10px ;
     border-bottom-right-radius: 10px ;
 }
@@ -62,4 +63,34 @@ caption,th,td{
     color: #780000;
   }
 
-  
+  th{
+    background-color: #fefae0;
+  }
+
+  tr:nth-of-type(2n){
+    background-color: hsl(67 50% 86% / 1);
+  }
+
+  @media(max-width: 650px){
+    th{
+        display: none;
+    }
+    td{
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    td:first-child{
+        padding: 1rem;
+    }
+
+    td:last-child{
+        padding: 1rem;
+    }
+
+    td::before{
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+  }
