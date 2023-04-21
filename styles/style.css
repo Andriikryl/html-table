@@ -24,3 +24,29 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  body{
+    background-color: #ccd5ae;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .wrapper{
+    width: min(900px, 100% - 3rem);
+    margin-inline: auto;
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #d4a373;
+    border-radius: 10px;
+}
+
+caption,th,td{
+    padding: 1rem;
+  }
+
+  caption, th{
+    text-align: left;
+  }
