@@ -76,7 +76,9 @@ caption,th,td{
         display: none;
     }
     td{
-        display: block;
+        display: grid;
+        grid-template-columns: 15ch auto;
+        gap: 1rem;
         padding: 0.5rem 1rem;
     }
 
